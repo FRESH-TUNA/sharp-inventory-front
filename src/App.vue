@@ -1,8 +1,6 @@
 <template>
   <v-app>
-    <v-layout class="d-flex flex-column">
-      <router-view />
-    </v-layout>
+    <router-view />
   </v-app>
 </template>
 
@@ -15,3 +13,14 @@ export default {
   }),
 };
 </script>
+
+<style>
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+
+body		{ font-family: 'NanumSquare', sans-serif }
+.normal		{ font-weight: 400 }
+.bold		{ font-weight: 700 }
+.bolder		{ font-weight: 800 }
+.light		{ font-weight: 300 }
+
+</style>
