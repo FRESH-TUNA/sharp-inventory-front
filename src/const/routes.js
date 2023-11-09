@@ -1,4 +1,8 @@
 const ROUTES = {
+    MAIN: {
+        PATH: "/",
+        NAME: "main"
+    },
     SKU: {
         LIST: { PATH: "/", NAME: "sku-list" },
         IN: { PATH: "/sku/:id/in", NAME: "sku-id-in" },

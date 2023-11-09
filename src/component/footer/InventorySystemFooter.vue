@@ -1,6 +1,6 @@
 <template class="inventory-system-footer" color="primary">
   <div class="d-flex justify-center align-center">
-    <h3>inventory management system</h3>
+    <h3>made by fresh-tuna</h3>
   </div>
 </template>
 

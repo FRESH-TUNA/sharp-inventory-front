@@ -1,5 +1,5 @@
 <template >
-  <div class="my-paginator">
+  <div class="my-paginator d-flex justify-center mt-4">
     <vue-awesome-paginate
         :total-items="totalItems"
         :items-per-page="size"

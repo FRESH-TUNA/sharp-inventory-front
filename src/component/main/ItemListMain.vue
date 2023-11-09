@@ -16,6 +16,7 @@
                   label="이름으로 검색"
                   :loading="searchLoading"
                   @click:append-inner="querySearch"
+                  @keyup.enter="querySearch"
                   append-inner-icon="mdi-magnify"
                   required
                   class="mr-2"
@@ -58,10 +59,16 @@
                 <td>
                   <v-btn
                       @click="router.push({ name: ROUTES.ITEM.IN.NAME, params: { id: item.id } })"
+                      prepend-icon="mdi-plus"
+                      color="green"
+                      class="mr-1"
                   >입고</v-btn>
                 </td>
                 <td><v-btn
                     @click="router.push({ name: ROUTES.ITEM.OUT.NAME, params: { id: item.id } })"
+                    prepend-icon="mdi-minus"
+                    color="red"
+                    class="mr-1"
                 >출고</v-btn></td>
               </tr>
             </tbody>

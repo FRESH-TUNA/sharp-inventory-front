@@ -6,28 +6,42 @@
           <h2>아이템 상세</h2>
         </v-col>
         <v-col class="d-flex justify-end">
-          <v-btn
-              @click="router.push({ name: ROUTES.ITEM.IN.NAME, params: { id: item.id } })"
-              prepend-icon="mdi-check-circle"
-              class="mr-1"
-          >입고</v-btn>
-
+            <v-btn
+                @click="router.push({ name: ROUTES.ITEM.IN.NAME, params: { id: item.id } })"
+                prepend-icon="mdi-plus"
+                color="green"
+                class="mr-2"
+            >입고</v-btn>
           <v-btn
               @click="router.push({ name: ROUTES.ITEM.OUT.NAME, params: { id: item.id } })"
-              prepend-icon="mdi-check-circle"
-              class="mr-1"
+              prepend-icon="mdi-minus"
+              color="orange"
+              class="mr-2"
           >출고</v-btn>
 
           <v-btn
               @click="router.push({ name: ROUTES.ITEM.EDIT.NAME, params: { id: item.id } })"
-              prepend-icon="mdi-check-circle"
-              class="mr-1"
-          >수정</v-btn>
+              color="blue"
+              class="pr-0 pl-0 mr-2"
+              size="37"
+          >
+            <v-icon
+                size="30"
+                icon="mdi-file-edit"
+            ></v-icon>
+          </v-btn>
 
           <v-btn
               @click="deleteProcedure"
-              prepend-icon="mdi-check-circle"
-          >삭제</v-btn>
+              color="red"
+              class="pr-0 pl-0"
+              size="37"
+          >
+            <v-icon
+                size="30"
+                icon="mdi-delete"
+            ></v-icon>
+          </v-btn>
         </v-col>
       </v-row>
 
@@ -64,7 +78,7 @@
             </v-col>
           </v-row>
 
-          <h3 class="mt-5">SKU(재고관리) 정보</h3>
+          <h3 class="mt-10">SKU(재고관리) 정보</h3>
           <v-row class="mt-1">
             <v-col>
               SKU 아이디 (재고관리코드)

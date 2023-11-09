@@ -16,6 +16,19 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: ROUTES.MAIN.PATH,
+      name: ROUTES.MAIN.NAME,
+      component: ItemListPage,
+      props: (route) => {
+        return {
+          page: route.query.page === undefined ? 1 : route.query.page,
+          size: route.query.size === undefined ? 4 : route.query.size,
+          sort: route.query.sort === undefined ? "asc" : route.query.sort,
+          query: route.query.query === undefined ? "" : route.query.query,
+        };
+      },
+    },
+    {
       path: ROUTES.ITEM.LIST.PATH,
       name: ROUTES.ITEM.LIST.NAME,
       component: ItemListPage,
